@@ -1,0 +1,59 @@
+.container {
+    width: 100%;
+    max-width: 1440px;
+    height: 600px;
+    background: url('./main.jpg') no-repeat;
+    margin: 0 auto;
+    padding: 0;
+    flex: 1 0 0;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main {
+    background-color: #E6F6EA;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 100px;
+
+}
+
+.main h1 {
+    max-width: 644px;
+    color: var(--www-centrinvest-ru-social-projects-career-1440-x-8104000244140625-default-black-russian, #01000C);
+    font-family: Roboto;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px; /* 120% */
+}
+
+.btn {
+    display: flex;
+    max-width: 196px;
+    max-height: 58px;
+    padding: 0.8px 33.801px 0.8px 34.199px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 8px;
+    background: #50B848;
+    border: none;
+    color: var(--www-centrinvest-ru-social-projects-career-1440-x-8104000244140625-default-nero, #FFF);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .2s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #4aa743;
+}

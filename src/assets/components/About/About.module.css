@@ -1,0 +1,82 @@
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.about {
+    margin: 150px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left img{
+    display: block;
+    height: 100%;
+    margin-right: 150px;
+    -webkit-box-shadow: 0px 0px 33px 10px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 33px 10px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 33px 10px rgba(34, 60, 80, 0.2);
+}
+
+
+.top {
+    color: #01000C;
+    /* www_centrinvest_ru_social-projects_career_1440x810.4000244140625_default/Montserrat/SemiBold 16 */
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.8px; /* 130% */
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+    max-width: 590px;;
+}
+.bot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #50B848;
+    margin-bottom: 20px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item__title {
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.8px; /* 130% */
+    letter-spacing: 0.5px;
+    padding-bottom: 5px;
+}
+
+.item__subtitle {
+    color: #000;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22.4px; /* 140% */
+    letter-spacing: 0.5px;
+}
+
