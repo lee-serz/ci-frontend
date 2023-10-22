@@ -53,41 +53,33 @@ function UserData() {
 
   return (
     <div className={styles.candidates}>
-      {candidates.map((candidate) => (
-        <div key={candidate.id} className={styles.candidate}>
-          <h1 onClick={() => toggleCandidate(candidate)}>
-            {`Анкета ${candidate.lastName} ${candidate.firstName} ${candidate.middleName}`}
-          </h1>
-          {expandedCandidate && expandedCandidate.id === candidate.id && (
-            <div>
-              <p>Имя: {candidate.firstName}</p>
-                <p>Фамилия: {candidate.lastName}</p>
-                <p>Отчество: {candidate.middleName}</p>
-                <p>Дата рождения: {candidate.birthDate}</p>
-                <p>Место рождения: {candidate.birthPlace}</p>
-                <p>Адрес регистрации: {candidate.registrationAddress}</p>
-                <p>Адрес проживания: {candidate.currentAddress}</p>
-                <p>Домашний телефон: {candidate.mobilePhone}</p>
-                <p>Мобильный телефон: {candidate.homePhone}</p>
-                <p>Электронная почта: {candidate.email}</p>
-                <p>Цель обращения: {candidate.practiceDuration}</p>
-                <p>Регион: {candidate.desiredRegion}</p>
-                <p>Образование: {candidate.institution}</p>
-                <p>Навыки: {candidate.skills}</p>
-                <p>Результат тестирования: {candidate.testingResult}</p>
-              <div className={styles.buttons}>
-                <button onClick={() => handleAccept(candidate)}>Принять</button>
-                <button className={styles.red_btn} onClick={() => handleReject(candidate)}>Отказать</button>
-              </div>
+        {candidates.length > 0 ? candidates.map((candidate) => (
+            <div key={candidate.id} className={styles.candidate}>
+                <h1 onClick={() => toggleCandidate(candidate)}>
+                    {`Анкета ${candidate.lastName} ${candidate.firstName} ${candidate.middleName}`}
+                </h1>
+                {expandedCandidate && expandedCandidate.id === candidate.id && (
+                    <div>
+                        <p>Имя: {candidate.firstName}</p>
+                        <p>Фамилия: {candidate.lastName}</p>
+                        {/* Добавьте остальные поля данных */}
+                        <div className={styles.buttons}>
+                            <button onClick={() => handleAccept(candidate)}>Принять</button>
+                            <button className={styles.red_btn} onClick={() => handleReject(candidate)}>Отказать</button>
+                        </div>
+                    </div>
+                )}
             </div>
-          )}
-        </div>
-      ))}
+        )) : <p>Нет доступных кандидатов</p>}
     </div>
-  );
+);
 }
 
 export default UserData;
+
+
+
+
 
 
 

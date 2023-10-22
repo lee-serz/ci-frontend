@@ -10,6 +10,8 @@ import Admin from '../pages/AdminCandidates/Admin'
 import AdminPractice from '../pages/AdminPractice/AdminPractice'
 import AdminInternship from '../pages/AdminIntership/AdminIntership'
 import Accepted from '../components/AcceptedCandidatesPage/Accepted'
+import Cabinet from '../pages/Cabinet/Cabinet'
+import RejactedCandidates from './Rejected/RejactedCandidates'
 
 const Router = () => {
   return (
@@ -25,6 +27,8 @@ const Router = () => {
             <Route element={<AdminPractice />} path='/practice-management' />
             <Route element={<AdminInternship />} path='/internship-management' />
             <Route element={<Accepted/>} path='/accepted' />
+            <Route element={<Cabinet/>} path='/cabinet' />  
+            <Route element={<RejactedCandidates/>} path='/rejacted' />          
         </Routes>
     </BrowserRouter>
   )
