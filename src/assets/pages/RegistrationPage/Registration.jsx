@@ -65,7 +65,7 @@ const Registration = () => {
           />
         </div>
         <button type="submit">Зарегистрироваться</button>
-        <Link to="/" className={styles.link}>Войти</Link>
+        <Link to="/home" className={styles.link}>Войти</Link>
       </form>
       
     </div>

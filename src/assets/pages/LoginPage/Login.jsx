@@ -89,7 +89,7 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit"><Link to={'/home'} className={styles.linkr}>Войти</Link></button>
+        <button type="submit"><Link to={'/'} className={styles.linkr}>Войти</Link></button>
         <Link to="/registration" className={styles.link}>Зарегистрироваться</Link>
         {isAdmin && <Link to="/candidates" className={styles.hidden_link}>Админ</Link>}
       </form>
