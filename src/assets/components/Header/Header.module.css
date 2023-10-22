@@ -58,3 +58,21 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+
+@media (max-width: 900px) {
+
+    .container{
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .link a {
+        display: none;
+    }
+    .header {
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+ }

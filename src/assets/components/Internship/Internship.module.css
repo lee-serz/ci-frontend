@@ -65,3 +65,17 @@
     font-weight: 500;
     line-height: 1.4;
 }
+
+@media (max-width: 900px) { 
+    .title {
+        font-size: 24px;
+    }
+    .cards {
+        align-items: center;
+        flex-direction: column;
+    }
+    .card{
+        height: 240px;
+        margin-bottom: 30px;
+    }
+ }

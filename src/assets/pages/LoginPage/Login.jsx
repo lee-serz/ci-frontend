@@ -20,25 +20,37 @@ const Login = () => {
     });
   };
 
+  const checkCredentials = async (email, password) => {
+    try {
+      // Здесь вам нужно выполнить запрос к вашей базе данных, чтобы проверить учетные данные.
+      // Если учетные данные совпадают, возвратите true, в противном случае false.
+
+      // Примерный код запроса к базе данных
+      const response = await axios.post('https://backend.xeonexus.su/api/candidat', {
+        email,
+        password,
+      });
+
+      return response.data.isValid; // Предположим, что сервер возвращает isValid: true/false
+    } catch (error) {
+      console.error('Error checking credentials: ', error);
+      return false;
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Validate the form data here before making the request.
       if (!formData.email || !formData.password) {
         console.error('Please fill in both email and password fields.');
         return;
       }
 
-      const response = await axios.post('https://backend.xeonexus.su/api/login', formData);
+      const isValidCredentials = await checkCredentials(formData.email, formData.password);
 
-      if (response.status === 200) {
-        // Assuming a successful response means authentication is successful.
-        if (formData.email === 'admin@mail.ru' && formData.password === 'admin') {
-          navigate('/candidates');
-        } else {
-          console.log('Successful login, but not admin');
-        }
+      if (isValidCredentials) {
+        navigate('/'); // Перенаправление на '/' после успешной аутентификации
       } else {
         console.error('Login failed. Please check your credentials.');
       }
@@ -50,7 +62,7 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <img src="./big-logo.png" alt="big logo" />
+      <img src="./big-logo.png" alt="big logo" />
         <div>
           <label>Почта:</label><br />
           <input
@@ -71,7 +83,7 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit">Войти</button>
+        <button type="submit"><Link to="/home" className={styles.linkr}>Войти</Link></button>
         <Link to="/registration" className={styles.link}>Зарегистрироваться</Link>
       </form>
     </div>

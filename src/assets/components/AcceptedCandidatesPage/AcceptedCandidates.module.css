@@ -83,3 +83,47 @@ margin-bottom: 20px;
 .candidate {
     margin-bottom: 15px;
 }
+
+@media (max-width: 900px) { 
+    .candidates h1 { 
+        box-sizing: border-box;
+        padding: 10px;
+        cursor: pointer;
+        color: var(--www-centrinvest-ru-cabinet-training-1440-x-8104000244140625-default-4-apple, #50B848);
+    
+    /* www_centrinvest_ru_cabinet_training__1440x810.4000244140625_default (4)/Arial/Bold 16 */
+    font-family: Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17.6px; /* 110% */
+    margin-bottom: 20px;
+    }
+    
+    .page h1{ 
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+    
+    .candidates p {
+        width: 250px;
+        color: var(--www-centrinvest-ru-cabinet-training-1440-x-8104000244140625-default-4-mine-shaft, #333);
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+    }
+
+    .candidate {
+        min-width: 0;
+        width: 300px;
+        padding: 15px;
+        border: 1px solid #3333336b;
+        border-radius: 5px;
+    }
+    
+ }

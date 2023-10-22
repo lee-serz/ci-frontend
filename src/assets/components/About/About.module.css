@@ -80,3 +80,8 @@
     letter-spacing: 0.5px;
 }
 
+@media (max-width: 900px) {  
+    .about{
+        display: none;
+    }
+}

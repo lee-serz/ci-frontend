@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AcceptedCandidates from './AcceptedCandidates.jsx'; // импортируйте компонент AcceptedCandidates
-import styles from './AcceptedCandidates.module.css'; // создайте свои стили для страницы
+import styles from './AcceptedCandidates1.module.css'; // создайте свои стили для страницы
 function AcceptedCandidatesPage() {
   const [candidates, setCandidates] = useState([]);
 
