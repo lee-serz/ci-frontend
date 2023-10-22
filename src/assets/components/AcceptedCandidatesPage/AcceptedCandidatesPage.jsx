@@ -6,7 +6,7 @@ function AcceptedCandidatesPage() {
   const [candidates, setCandidates] = useState([]);
 
   useEffect(() => {
-    axios.get('http://94.241.141.190:9091/api/accepted')
+    axios.get('https://backend.xeonexus.su/api/accepted')
       .then(response => {
         const data = response.data;
         setCandidates(data);

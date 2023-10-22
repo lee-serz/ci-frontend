@@ -7,7 +7,7 @@ function UserData() {
   const [expandedCandidate, setExpandedCandidate] = useState(null);
 
   useEffect(() => {
-    axios.get('http://94.241.141.190:9091/api/forms')
+    axios.get('https://backend.xeonexus.su/api/forms')
       .then(response => {
         const data = response.data;
         setCandidates(data);
@@ -18,7 +18,7 @@ function UserData() {
   }, []);
 
   const handleAccept = (candidate) => {
-    axios.post(`http://94.241.141.190:9091/api/choise-accept/${candidate.id}`)
+    axios.post(`https://backend.xeonexus.su/api/choise-accept/${candidate.id}`)
       .then(response => {
         // Обновите список кандидатов, исключив принятого кандидата
         const updatedCandidates = candidates.filter(c => c.id !== candidate.id);
@@ -30,7 +30,7 @@ function UserData() {
   };
   
   const handleReject = (candidate) => {
-    axios.post(`http://94.241.141.190:9091/api/choise-reject/${candidate.id}`)
+    axios.post(`https://backend.xeonexus.su/api/choise-reject/${candidate.id}`)
       .then(response => {
         // Обновите список кандидатов, исключив отклоненного кандидата
         const updatedCandidates = candidates.filter(c => c.id !== candidate.id);

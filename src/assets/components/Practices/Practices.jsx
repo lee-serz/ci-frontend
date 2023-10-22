@@ -6,7 +6,7 @@ function Practices() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://94.241.141.190:9091/api/practice')
+    axios.get('https://backend.xeonexus.su/api/practice')
       .then(response => {
         setData(response.data);
       })

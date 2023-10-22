@@ -6,7 +6,7 @@ function Internship() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://94.241.141.190:9091/api/internships')
+    axios.get('https://backend.xeonexus.su/api/internships')
       .then(response => {
         setData(response.data);
       })

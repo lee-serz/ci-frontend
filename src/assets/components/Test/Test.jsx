@@ -11,7 +11,7 @@ function Test() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get('http://94.241.141.190:9091/api/tests')
+        axios.get('https://backend.xeonexus.su/api/tests')
             .then(response => {
                 setQuestions(response.data);
                 setLoading(false);

@@ -23,7 +23,7 @@ const Registration = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://94.241.141.190:9091/api/register', formData);
+      const response = await axios.post('https://backend.xeonexus.su/api/register', formData);
       // Обработайте успешную регистрацию здесь
     } catch (error) {
       console.error('Registration error: ', error);

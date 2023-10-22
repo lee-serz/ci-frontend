@@ -6,7 +6,7 @@ function RejactedCandidatesPage() {
   const [candidates, setCandidates] = useState([]);
 
   useEffect(() => {
-    axios.get('http://94.241.141.190:9091/api/rejected')
+    axios.get('https://backend.xeonexus.su/api/rejected')
       .then(response => {
         const data = response.data;
         setCandidates(data);

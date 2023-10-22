@@ -10,7 +10,7 @@ const Cabinet = () => {
 
     useEffect(() => {
         // Получение "Результата тестирования" из сервера
-        axios.get('http://94.241.141.190:9091/api/user')
+        axios.get('https://backend.xeonexus.su/api/user')
             .then(response => {
                 setScore(response.data.score);
             })
@@ -19,7 +19,7 @@ const Cabinet = () => {
             });
 
         // Получение "Статуса заявки" из сервера
-        axios.get('http://94.241.141.190:9091/api/user')
+        axios.get('https://backend.xeonexus.su/api/user')
             .then(response => {
                 setApplicationStatus(response.data.applicationStatus);
             })
@@ -28,7 +28,7 @@ const Cabinet = () => {
             });
 
         // Получение имени пользователя из сервера
-        axios.get('http://94.241.141.190:9091/api/user')
+        axios.get('https://backend.xeonexus.su/api/user')
             .then(response => {
                 setUsername(response.data.username);
             })

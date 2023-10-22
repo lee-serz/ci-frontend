@@ -30,7 +30,7 @@ const Login = () => {
         return;
       }
 
-      const response = await axios.post('http://94.241.141.190:9091/api/login', formData);
+      const response = await axios.post('https://backend.xeonexus.su/api/login', formData);
 
       if (response.status === 200) {
         // Assuming a successful response means authentication is successful.

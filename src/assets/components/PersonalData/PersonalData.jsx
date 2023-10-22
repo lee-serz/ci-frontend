@@ -47,7 +47,7 @@ const PersonalData = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://94.241.141.190:9091/api/forms', formData);
+      await axios.post('https://backend.xeonexus.su/api/forms', formData);
       alert('Данные успешно отправлены в базу данных!');
       setFormData(initialFormData); // Очистить форму
     } catch (error) {
