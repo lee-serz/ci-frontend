@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './Test.module.css';
+import { Link } from 'react-router-dom';
 
 function Test() {
     const [questions, setQuestions] = useState([]);
@@ -69,6 +70,7 @@ function Test() {
                     <div>
                         <h2>Результаты теста</h2>
                         <p>Вы правильно ответили на {score} из {questions.length} вопросов.</p>
+                        <Link className={styles.btn_link} to={'/cabinet'}>В личный кабинет</Link>
                     </div>
                 )}
             </div>

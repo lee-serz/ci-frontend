@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../components/Header/Header';
 import styles from './Cabinet.module.css';
 import axios from 'axios';
+import Spinner from '../../components/Spinner/Spinner';
 
 const Cabinet = () => {
     const [score, setScore] = useState(null);
@@ -40,20 +41,22 @@ const Cabinet = () => {
     return (
         <>
             <Header />
+            
             <div className={styles.container}>
                 <div className={styles.cabinet}>
                     <h1>Личный кабинет</h1>
+                    <Spinner />
                     <div>
                         <h2>Hello, </h2>
-                        <p>{username !== null ? `${username}` : 'Имя не доступно'}</p>
+                        <p>{username !== null ? `${username}` : 'Loading...'}</p> 
                     </div>
                     <div>
                         <h2>Результат тестирования: </h2>
-                        <p>{score !== null ? `Ваш результат: ${score}` : 'Результат не доступен'}</p>
+                        <p>{score !== null ? `Ваш результат: ${score}` : 'Loading...'}</p> 
                     </div>
                     <div>
                         <h2>Статус заявки:</h2>
-                        <p>{applicationStatus !== null ? `Статус вашей заявки: ${applicationStatus}` : 'Статус не доступен'}</p>
+                        <p>{applicationStatus !== null ? `Статус вашей заявки: ${applicationStatus}` : 'Loading...'}</p> 
                     </div>
                 </div>
             </div>

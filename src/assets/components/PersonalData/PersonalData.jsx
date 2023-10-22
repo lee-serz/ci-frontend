@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 
+
 const initialFormData = {
   lastName: '',
   firstName: '',
@@ -187,6 +188,7 @@ const PersonalData = () => {
         </label>
         <br />
         <button type="submit" className={styles.btn}>Отправить</button>
+        <Link type="submit" className={styles.btn_link} to={'/test'}>Пройти тест</Link>
       </form>
     </div>
    </>

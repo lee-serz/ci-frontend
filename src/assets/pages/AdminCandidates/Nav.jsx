@@ -7,10 +7,8 @@ function Navigation() {
     <div className={styles.nav_admin}>
       <Link className={styles.link} to="/candidates">Кандидаты</Link>
       <Link className={styles.link} to="/accepted">Принятые кандидаты</Link>
-      <Link className={styles.link} to="/rejected">Отказано</Link>
       <Link className={styles.link} to="/practice-management">Управление практиками</Link>
       <Link className={styles.link} to="/internship-management">Управление стажировками</Link>
-      <Link className={styles.link} to="/testing-management">Управление тестированиями</Link>
     </div>
   );
 }

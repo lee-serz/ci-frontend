@@ -50,7 +50,11 @@ const Login = () => {
       const isValidCredentials = await checkCredentials(formData.email, formData.password);
 
       if (isValidCredentials) {
-        navigate('/'); // Перенаправление на '/' после успешной аутентификации
+        if (formData.email === 'admin@mail.ru' && formData.password === 'admin') {
+          navigate('/candidates'); // Перенаправление на '/candidates' для админа
+        } else {
+          navigate('/'); // Перенаправление на '/' после успешной аутентификации для остальных пользователей
+        }
       } else {
         console.error('Login failed. Please check your credentials.');
       }
@@ -59,10 +63,12 @@ const Login = () => {
     }
   };
 
+  const isAdmin = formData.email === 'admin@mail.ru' && formData.password === 'admin';
+
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit} className={styles.form}>
-      <img src="./big-logo.png" alt="big logo" />
+        <img src="./big-logo.png" alt="big logo" />
         <div>
           <label>Почта:</label><br />
           <input
@@ -83,8 +89,9 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit"><Link to="/home" className={styles.linkr}>Войти</Link></button>
+        <button type="submit"><Link to={'/home'} className={styles.linkr}>Войти</Link></button>
         <Link to="/registration" className={styles.link}>Зарегистрироваться</Link>
+        {isAdmin && <Link to="/candidates" className={styles.hidden_link}>Админ</Link>}
       </form>
     </div>
   );

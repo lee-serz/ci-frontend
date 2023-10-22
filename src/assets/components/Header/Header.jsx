@@ -10,16 +10,10 @@ const Header = () => {
         <Link className={styles.logo} to={'/home'}>
           <img src="./logo.png" alt="Logo" />
         </Link>
-
-        <nav>
-          <div className={styles.link}><a href="/">Направления</a></div>
-          <div className={styles.link}><a href="/">Отбор</a></div>
-          <div className={styles.link}><a href="/">Условия</a></div>
-        </nav>
       </div>
 
       <div>
-        <button className={styles.button}>Подать заявку</button>
+        <Link className={styles.button} to={'/personal-data'}>Подать заявку</Link>
       </div>
     </header>
     </div>

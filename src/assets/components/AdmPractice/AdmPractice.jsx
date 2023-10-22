@@ -21,12 +21,12 @@ function FormComponent() {
 
     try {
       // Отправка данных на сервер
-      await axios.post('/api/your-endpoint', formData);
+      await axios.post('https://backend.xeonexus.su/api/practice/create', formData);
       alert('Данные успешно отправлены в базу данных!');
       // Очистка полей формы
       setFormData({
         title: '',
-        description: '',
+        subtitle: '',
       });
     } catch (error) {
       console.error('Ошибка при отправке данных:', error);
@@ -52,8 +52,8 @@ function FormComponent() {
           <label>
             Описание:
            <br /> <textarea
-              name="description"
-              value={formData.description}
+              name="subtitle"
+              value={formData.subtitle}
               onChange={handleInputChange}
             />
           </label>

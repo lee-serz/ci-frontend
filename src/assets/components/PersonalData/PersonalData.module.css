@@ -41,7 +41,7 @@ h2 {
     line-height: 17.6px; /* 110% */
 }
 
-.btn {
+.btn, .btn_link {
     margin: 50px 0px;
     color: var(--www-centrinvest-ru-social-projects-career-1440-x-8104000244140625-default-nero, #FFF);
     text-align: center;
