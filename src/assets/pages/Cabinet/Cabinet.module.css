@@ -5,10 +5,7 @@
 }
 
 .cabinet {
-    height: 600px;
-    background-image: url('./cabinet.png');
-    background-repeat: no-repeat;
-    background-position: right 0% bottom 45%;
+
 }
 
 .cabinet h1 {
